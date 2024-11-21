@@ -6,19 +6,19 @@ public class Car {
         Diesel, Gasoline, MildHybrid, PlugInHybrid, Electrical, LPG
     }
 
-    private final String brand;
-    private final String model;
-    private final String engine;
-    private final int year;
+    private final String brand;     // mandatory
+    private final String model;     // mandatory
+    private final String engine;    // mandatory
+    private final int year;     // mandatory
 
-    private String color;
-    private FuelType fuelType;
+    private String color;   // optional
+    private FuelType fuelType;      // optional
 
-    private boolean hasSoundSystem;
-    private String soundSystem;
+    private boolean hasSoundSystem;     // optional
+    private String soundSystem;     // optional
 
-    private boolean hasHeatedSeats;
-    private boolean hasAdaptiveHeadlights;
+    private boolean hasHeatedSeats;     // optional
+    private boolean hasAdaptiveHeadlights;      // optional
 
     static class CarBuilder {
         private String brand;

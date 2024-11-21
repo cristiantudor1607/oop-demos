@@ -2,7 +2,9 @@ package org.builder.simplebuilder;
 
 public class Main {
     public static void main(String[] args) {
-        // Let's create a complete specified car
+        /**
+         * Let's create a complete car (with all mandatory fields set.
+         */
         Car completeCar = new Car.CarBuilder().brand("BMW")
                 .model("4 Series")
                 .year(2022)
@@ -14,17 +16,28 @@ public class Main {
                 .hasAdaptiveHeadlights(true)
                 .build();
 
-        // Check if everything works fine
+        /**
+         * For this car, with all fields set, it works fine.
+         */
         completeCar.displayInfo();
 
-        // Now, let's try to create an incomplete car. An incomplete car
-        // means that not all mandatory fields where filled
+        /**
+         * Now, let's try to create an incomplete car.
+         * An incomplete car means that not all mandatory
+         * fields where filled
+         */
         Car incompleteCar = new Car.CarBuilder()
                 .brand("Opel")
                 .model("Astra G")
                 .year(2007)
                 .build();
 
+        /**
+         * We'll realize that this builder has a problem.
+         * The mandatory fields are just a convention at this point.
+         * This builder permits the creation of objects with mandatory
+         * fields not yet filled, and we don't want that to happen.
+         */
         incompleteCar.displayInfo();
     }
 }
