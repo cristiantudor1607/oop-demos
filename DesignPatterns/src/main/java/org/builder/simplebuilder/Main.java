@@ -37,6 +37,13 @@ public class Main {
          * The mandatory fields are just a convention at this point.
          * This builder permits the creation of objects with mandatory
          * fields not yet filled, and we don't want that to happen.
+         *
+         * Unfortunately, if we want to make a Builder after this pattern,
+         * there is no way we can put a constraint on the build method,
+         * so it won't work if the mandatory fields weren't set previously.
+         *
+         * But what if we put parameters on the Builder constructor?
+         * For this, check the mandatoryfieldsbuilder package.
          */
         incompleteCar.displayInfo();
     }
