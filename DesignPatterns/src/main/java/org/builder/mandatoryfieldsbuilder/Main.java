@@ -11,5 +11,8 @@ public class Main {
                 .build();
 
         c1.displayInfo();
+
+        // This builder works fine as long as we don't have a big number of mandatory fields, or
+        // a reset method.
     }
 }
